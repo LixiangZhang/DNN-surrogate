@@ -11,14 +11,15 @@ import scipy.io as sio
 
 from regressor import FR_21
 from model import FR_model_adv
-#from model_original import FR_model
-# load data
-train_data = sio.loadmat('result_c1s1.mat')
-input_x = train_data['material_E']
-output_y = train_data['dis_all']
 
-# split data into training set and testing set
-x_train, x_test, y_train, y_test = train_test_split(input_x, output_y, train_size=1024, random_state=1230)
+# load data
+train_data = sio.loadmat('train_data_1024.mat')
+x_train = train_data['material_E']
+y_train = train_data['dis_all']
+test_data = sio.loadmat('test_data_1000.mat')
+x_test = test_data['material_E']
+y_test = test_data['dis_all']
+
 
 weight_decay = 7e-6
 batch_size = 8
