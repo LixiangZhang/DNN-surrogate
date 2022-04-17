@@ -13,7 +13,7 @@ from regressor import FR_21
 from model import FR_model_adv
 
 # load data
-test_data = sio.loadmat('test_data_1000.mat')
+test_data = sio.loadmat('Test_data_plate.mat')
 x_test = test_data['material_E']
 y_test = test_data['dis_all']
 

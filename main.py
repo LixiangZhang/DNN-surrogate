@@ -13,13 +13,12 @@ from regressor import FR_21
 from model import FR_model_adv
 
 # load data
-train_data = sio.loadmat('train_data_1024.mat')
+train_data = sio.loadmat('Train_data_plate.mat')
 x_train = train_data['material_E']
 y_train = train_data['dis_all']
-test_data = sio.loadmat('test_data_1000.mat')
+test_data = sio.loadmat('Test_data_plate.mat')
 x_test = test_data['material_E']
 y_test = test_data['dis_all']
-
 
 weight_decay = 7e-6
 batch_size = 8
